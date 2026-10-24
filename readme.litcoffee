@@ -109,7 +109,7 @@ When meet one of next character, put it as token and continue to next character.
 
 Skip whitespaces.
 
-          when " "
+          when " ", "\t", "\n", "\r", "\f", "\v"
             i++
 
 If character is unknown,

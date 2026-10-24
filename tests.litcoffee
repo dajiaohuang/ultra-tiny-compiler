@@ -46,3 +46,6 @@ The only thing we want to test it's a compiler. Lets describe it.
         compile("add(1, subtract(2, 3))").should.equal "(add 1 (subtract 2 3))"
         compile("squareRoot (100)").should.equal "(squareRoot 100)"
         compile("1000 + 1").should.equal "(+ 1000 1)"
+        compile("1000\t+\t1").should.equal "(+ 1000 1)"
+        compile("1000\n+\n1").should.equal "(+ 1000 1)"
+        compile("1000\r\n+\r\n1").should.equal "(+ 1000 1)"
